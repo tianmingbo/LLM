@@ -5,7 +5,7 @@ from langchain_core.documents import Document
 
 
 def load_pdf(
-        file_path: str = "./assets/sample.pdf",  # PDF 文件路径（支持相对/绝对路径）
+        file_path: str = "../assets/sample.pdf",  # PDF 文件路径（支持相对/绝对路径）
         mode: Literal["page", "single"] = "page",  # PyPDF 模式：按页/整文档
         password: str | bytes | None = None,  # 加密 PDF 密码
         extract_images: bool = False,  # 是否提取图片并交给 images_parser

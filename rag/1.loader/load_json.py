@@ -9,7 +9,7 @@ def _metadata_func(record: dict, metadata: dict) -> dict:
 
 
 def load_json(
-    file_path: str = "./assets/sample.json",  # JSON 文件路径（支持相对/绝对路径）
+    file_path: str = "../assets/sample.json",  # JSON 文件路径（支持相对/绝对路径）
     jq_schema: str = ".[]",  # jq 选择器：按条遍历数组用 .[]，取嵌套字段可用 .data.items[]
     content_key: str = "content",  # 每条记录中作为 page_content 的字段名
     is_content_key_jq_parsable: bool = False,  # content_key 是否也按 jq 表达式解析

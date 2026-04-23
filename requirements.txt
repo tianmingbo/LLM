@@ -23,3 +23,11 @@ beautifulsoup4>=4.12
 # Loader extras
 jq>=1.8
 unstructured>=0.14
+
+pypdf~=6.10.2
+langchain-text-splitters~=1.1.1
+dotenv~=0.9.9
+huggingface_hub~=1.11.0
+numpy~=1.26.4
+# milvus-lite 目前依赖 pkg_resources，setuptools>=81 可能缺失该模块
+setuptools<81

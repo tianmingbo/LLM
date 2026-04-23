@@ -5,7 +5,7 @@ from langchain_core.documents import Document
 
 
 def load_markdown(
-        file_path: str = "./assets/sample.md",  # Markdown 文件路径（支持相对/绝对路径）
+        file_path: str = "../assets/sample.md",  # Markdown 文件路径（支持相对/绝对路径）
         mode: str = "elements",  # Unstructured 模式：single/elements
         encoding: str = "utf-8",  # 文件编码（TextLoader 及兜底场景使用）
         autodetect_encoding: bool = False,  # 是否自动探测编码（TextLoader）

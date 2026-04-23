@@ -19,7 +19,7 @@
 from rag.loader.load_markdown import load_markdown
 
 docs = load_markdown(
-    file_path="rag/loader/assets/sample.md",
+    file_path="rag/1.loader/assets/sample.md",
     mode="single",
 )
 print(len(docs), docs[0].metadata)
@@ -29,7 +29,7 @@ print(len(docs), docs[0].metadata)
 
 ```python
 docs = load_markdown(
-    file_path="rag/loader/assets/sample.md",
+    file_path="rag/1.loader/assets/sample.md",
     mode="elements",
 )
 for i, d in enumerate(docs[:5], 1):
@@ -87,7 +87,7 @@ LIMIT 5;
 
 ```bash
 source .venv/bin/activate
-python3 rag/loader/load_markdown.py
+python3 rag/1.loader/load_markdown.py
 ```
 
 ## 7. 引用与说明

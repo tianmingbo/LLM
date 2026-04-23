@@ -5,7 +5,7 @@ from langchain_core.documents import Document
 
 
 def load_doc(
-        file_path: str = "./assets/sample.docx",  # Word 文件路径（.doc/.docx）
+        file_path: str = "../assets/sample.docx",  # Word 文件路径（.doc/.docx）
         mode: str = "elements",  # Unstructured 模式：single/elements
         use_unstructured: bool = True,  # True: 优先 UnstructuredWordDocumentLoader
         fallback_to_docx2txt: bool = True,  # Unstructured 失败时，.docx 是否降级到 Docx2txtLoader

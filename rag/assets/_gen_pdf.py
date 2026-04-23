@@ -1,6 +1,6 @@
 from pypdf import PdfWriter
 
-out_path = "rag/loader/assets/sample.pdf"
+out_path = "rag/1.loader/assets/sample.pdf"
 
 writer = PdfWriter()
 writer.add_blank_page(width=595, height=842)
@@ -8,7 +8,7 @@ writer.add_metadata(
     {
         "/Title": "PDF Loader Demo",
         "/Author": "LlangChain",
-        "/Subject": "Sample PDF for loader test",
+        "/Subject": "Sample PDF for 1.loader test",
     }
 )
 
