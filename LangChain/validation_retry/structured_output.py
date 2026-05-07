@@ -4,7 +4,7 @@
 import os
 from typing import List
 from dotenv import load_dotenv
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from langchain_community.chat_models import ChatTongyi
 
 load_dotenv(override=True)
@@ -17,13 +17,20 @@ class Invoice(BaseModel):
     total_amount: float = Field(description="金额")
     items: List[str] = Field(description="商品")
 
+    @field_validator('invoice_number')
+    @classmethod
+    def validate_name(cls, v):
+        if v.strip() == "":
+            raise ValueError('invoice_number不能为空')
+        return v.strip()
+
 
 model = ChatTongyi(model="qwen-plus", max_retries=2, api_key=qwen_api_key)
 
 structured_llm = model.with_structured_output(Invoice)
 
 invoice_text = """
-发票号: INV-2024-001
+发票号: 
 日期: 2024-01-15
 总金额: 1299.00
 商品: MacBook Pro, AppleCare+
