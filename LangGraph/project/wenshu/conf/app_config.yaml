@@ -1,0 +1,47 @@
+logging:
+  file:
+    enable: true
+    level: INFO
+    path: logs
+    rotation: "10 MB"
+    retention: "7 days"
+  console:
+    enable: true
+    level: INFO
+
+db_meta:
+  host: ""
+  port: 3306
+  user: atguigu
+  password: Atguigu.123
+  database: meta
+
+db_dw:
+  host: ""
+  port: 3306
+  user: atguigu
+  password: Atguigu.123
+  database: dw
+
+qdrant:
+  host: ""
+  port: 6333
+  embedding_size: 1024
+
+embedding:
+  model: "text-embedding-v4"
+  dimension: 1024
+  api_key: "sk-e47084aadc1249dd5bb8db0678fc"
+#  base_http_api_url: "https://dashscope-intl.aliyuncs.com/api/v1"
+
+
+es:
+  host: ""
+  port: 9200
+  index_name: data_agent
+
+
+llm:
+  model_name: "qwen-plus"
+  api_key: "sk-e47084aadcd5bb8db0678fc"
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
